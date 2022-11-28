@@ -1,0 +1,31 @@
+enum IpAddrKind {
+  V4(String), 
+  V6(String),
+}
+
+struct IpAddr {
+  kind: IpAddrKind,
+  address: String
+}
+
+enum Message {
+  Quit,
+  Move{x, y},
+  ChangeColor(u32)
+}
+
+impl Message {
+  fn some_function() {
+    println!("Let's get some rust action going");
+  }
+}
+
+fn main() {
+  let four = IpAddrKind::V4;
+  let siz = IpAddrKind::V6;
+
+  let localhost = IpAddr {
+    kind: IpAddrKind::V4,
+    address: String::from("127.0.0.1")
+  };
+}
